@@ -1,0 +1,321 @@
+:root {
+  /* --color-primary: #feb900; */
+  --primary: #fc6119;
+  --secondary: #5f656f;
+  --light: #f5f5f5;
+  --dark: #02245b;
+  --color-secondary: #52565e;
+}
+
+h1,
+h2,
+.h1,
+.h2,
+.fw-bold {
+  font-weight: 700 !important;
+}
+
+h3,
+h4,
+.h3,
+.h4,
+.fw-medium {
+  font-weight: 600 !important;
+}
+
+h5,
+h6,
+.h5,
+.h6,
+.fw-semi-bold {
+  font-weight: 500 !important;
+}
+
+/*** Spinner ***/
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+  z-index: 99999;
+}
+
+#spinner.show {
+  transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+/*** Button ***/
+.btn {
+  transition: 0.5s;
+  font-weight: 500;
+}
+
+.btn-primary,
+.btn-outline-primary:hover {
+  color: #ffffff;
+}
+
+.btn-square {
+  width: 38px;
+  height: 38px;
+}
+
+.btn-sm-square {
+  width: 32px;
+  height: 32px;
+}
+
+.btn-lg-square {
+  width: 48px;
+  height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+}
+
+
+/*** Navbar ***/
+.navbar .navbar-brand {
+  flex-grow: 0; /* Do not occupy available space */
+  text-align: left; /* Align the title to the left */
+}
+
+.navbar {
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-between; /* Space out the title and button */
+  align-items: center; /* Center items vertically */
+  height: 100px; /* Fixed height */
+  padding: 0 20px; /* Adjust padding as needed */
+  background-color: white; /* Background to ensure visibility */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for separation */
+}
+
+.navbar-title {
+  font-size: 1.8rem; /* Adjust font size for better visibility */
+  font-weight: 900;
+  color: #0057b3;
+  text-align: center; /* Center align title */
+  margin: 0 auto; /* Ensure it's centered in the navbar */
+  margin-left: 40%;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items */
+    height: auto; /* Adjust height */
+  }
+
+  .navbar-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px; /* Add spacing if needed */
+  }
+
+  .container2 {
+    margin-top: 100px; /* Adjust for smaller screens */
+  }
+}
+
+
+
+/* Center content container */
+.container2 {
+  display: flex;
+  justify-content: center; /* Keep horizontal centering */
+  align-items: flex-start; /* Move boxes to the top of the container */
+  height: 100vh; /* Full viewport height */
+  gap: 100px; /* Gap between the boxes */
+  flex-wrap: wrap; /* Wrap boxes if needed */
+  padding-top: 5%; /* Optional: Add padding from the top */
+  background-color:#ffffff ; /* Add background image */
+  background: linear-gradient(rgba(245, 245, 245, 0.6), rgba(245, 245, 245, 0.6)), url('../img/bgimage2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.btn-orange {
+  background-color: #ff5e14;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: darkorange;
+}
+
+/* Adjust logo size and alignment */
+.box1 img {
+  width: 100px; /* Increased logo size */
+  height: 100px; /* Increased logo size */
+  margin-bottom: 20px;
+  margin-top: 10px; /* Add consistent spacing below the logo */
+}
+
+.box2 img {
+  width: 100px; /* Increased logo size */
+  height: 100px; /* Increased logo size */
+  margin-bottom: 30px;
+}
+
+/* Ensure both boxes use the same styling for alignment */
+.box1,
+.box2 {
+  width: 550px; /* Same width */
+  height: 450px; /* Same height */
+  background: #ffffff;
+  color: #333333;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.box1:hover,
+.box2:hover {
+  transform: scale(1.08); /* Same hover effect */
+}
+
+.box1 h2 {
+  padding-top: 10px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #001b49;
+}
+
+.box2 h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #001b49;
+  padding-bottom: 20px;
+}
+
+.box1 p{
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0 20px 20px;
+  color: #02245b;
+}
+
+.box2 p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0 20px 20px;
+  color: #02245b;
+}
+
+.box1 button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #1E88E5;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.box2 button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #1E88E5;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.box1 button:hover,
+.box2 button:hover {
+  background-color: #02245b;
+}
+
+
+
+/*** Footer ***/
+.footer {
+  width: 100%;
+  background-color: #001b49; /* Adjust color as needed */
+  padding: 10px 0; /* Add padding for better spacing */
+}
+
+.footer-container {
+  max-width: 200%; /* Adjust max width as needed */
+  margin: 0 auto; /* Center content within the footer */
+  padding: 0 10px; /* Add some padding for mobile */
+}
+
+.footer .btn.btn-link {
+  display: block;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: left;
+  color: #b0b9ae;
+  font-weight: normal;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+
+.footer .btn.btn-link::before {
+  position: relative;
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+  color: var(--light);
+  letter-spacing: 1px;
+  box-shadow: none;
+}
+
+/* Ensure even spacing for columns */
+.row.g-4 > div {
+  text-align: left; /* Align content to the left */
+}
+
+/* Adjust column width and spacing */
+.footer .col-lg-4 {
+  max-width: 30%; /* Keeps columns proportional */
+  flex: 0 0 auto; /* Prevent shrinking */
+  margin: 0 auto; /* Centers the columns */
+}
+
+/* Optional: Add padding for equal spacing */
+.footer .row.g-4 {
+  justify-content: space-around; /* Adds space between columns */
+  gap: 30px; /* Adds consistent gap */
+}
+
+/* General styling for responsiveness */
+@media (max-width: 768px) {
+  .footer .col-lg-4 {
+    max-width: 100%;
+    margin-bottom: 20px; /* Adds spacing for smaller screens */
+  }
+}

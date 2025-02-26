@@ -91,7 +91,7 @@ h6,
     font-weight: normal;
 }
 
-/*** Navbar ***/
+/** Navbar **/
 .navbar.sticky-top {
     top: -100px;
     transition: .5s;
@@ -140,6 +140,16 @@ h6,
   color: var(--dark);
 }
 
+.navbar .dropdown-menu .dropdown-item {
+  font-weight: 700; /* Bolder font */
+  padding: 8px 15px; /* Adjust padding */
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+  color: orange;
+  background: none;
+}
+
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
     color: orange; /* Text hover in orange */
@@ -156,10 +166,40 @@ h6,
     margin-left: 8px;
 }
 
+.navbar .dropdown-toggle.active {
+  color: orange;
+  background: none;
+}
+
+.navbar .dropdown-menu .dropdown-item.active {
+  color: orange;
+  background: none;
+}
+
+
 /* Ensure navbar background in mobile view */
 @media (max-width: 768px) {
   .navbar {
     background-color: rgb(248, 247, 247) !important; /* Adjust to your desired color */
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+      display: block;
+      border: none;
+      margin-top: 0;
+      top: 150%;
+      opacity: 0;
+      visibility: hidden;
+      transition: .5s;
+  }  
+
+  .navbar .nav-item:hover .dropdown-menu {
+      top: 100%;
+      visibility: visible;
+      transition: .5s;
+      opacity: 1;
   }
 }
 
